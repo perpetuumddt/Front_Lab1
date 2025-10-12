@@ -1,8 +1,51 @@
 /* Common styles for tables */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 20px 0;
+    font-size: 14px;
+}
+
+table caption {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
 table,
 th,
 td {
     border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+td {
+    vertical-align: top;
+}
+
+td ul {
+    margin: 0;
+    padding-left: 15px;
+}
+
+td strong {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+/* Small table styles for index page */
+.small-table {
+    max-width: 600px;
+    margin: 20px auto;
+    font-size: 16px;
 }
 
 /* Header styles */
