@@ -1,0 +1,43 @@
+/* Common styles for tables */
+table,
+th,
+td {
+    border: 1px solid black;
+}
+
+/* Header styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Navigation styles */
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+/* Button styles for header */
+.header-buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Section styles */
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* List styles */
+ol {
+    text-align: left;
+}
+
+ul {
+    text-align: left;
+}
