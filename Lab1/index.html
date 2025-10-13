@@ -18,6 +18,10 @@
                         <li><a href="contact.html">Feedback</a></li>
                         </ul>
                 </nav>
+                <div class="header-buttons">
+                        <button>Log in</button>
+                        <button>Sign in</button>
+                </div>
         </header>
         <main>
                 <!--About Us-->
@@ -54,24 +58,145 @@
                 <!-- Table -->
                 <table class="small-table">
                         <thead>
-                                <th colspan="3">Available Programming Languages for learning</th>
+                                <th colspan="4">Available topics for learning</th>
                         </thead>
                         <tbody>
+                                <!-- Programming Languages Section -->
                                 <tr>
-                                        <th>Programming Languages</th>
-                                        <th>Frontend</th>
-                                        <th>Databases</th>
+                                        <th colspan="4">Programming Languages</th>
                                 </tr>
                                 <tr>
-                                        <td>C#, C++, Python, Java, Go</td>
-                                        <td>HTML, CSS, JavaScript</td>
-                                        <td>MySQL, PostgreSQL, MongoDB, Redis</td>
+                                        <td class="lang-cell">
+                                                <a href="https://learn.microsoft.com/en-us/dotnet/csharp/" target="_blank" class="lang-link">
+                                                        <div class="lang-icon">🔷</div>
+                                                        <div class="lang-name">C#</div>
+                                                        <div class="lang-desc">Web & Desktop</div>
+                                                </a>
+                                        </td>
+                                        <td class="lang-cell">
+                                                <a href="https://docs.python.org/3/" target="_blank" class="lang-link">
+                                                        <div class="lang-icon">🐍</div>
+                                                        <div class="lang-name">Python</div>
+                                                        <div class="lang-desc">Data Science & AI</div>
+                                                </a>
+                                        </td>
+                                        <td class="lang-cell">
+                                                <a href="https://docs.oracle.com/en/java/" target="_blank" class="lang-link">
+                                                        <div class="lang-icon">☕</div>
+                                                        <div class="lang-name">Java</div>
+                                                        <div class="lang-desc">Enterprise Apps</div>
+                                                </a>
+                                        </td>
+                                        <td class="lang-cell">
+                                                <a href="https://go.dev/doc/" target="_blank" class="lang-link">
+                                                        <div class="lang-icon">🐹</div>
+                                                        <div class="lang-name">Go</div>
+                                                        <div class="lang-desc">Cloud & Microservices</div>
+                                                </a>
+                                        </td>
+                                </tr>
+
+                                <!-- Frontend Section -->
+                                <tr>
+                                        <th colspan="4">Frontend Technologies</th>
+                                </tr>
+                                <tr>
+                                        <td class="lang-cell">
+                                                <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" class="lang-link">
+                                                        <div class="lang-icon">📄</div>
+                                                        <div class="lang-name">HTML</div>
+                                                        <div class="lang-desc">Web Structure</div>
+                                                </a>
+                                        </td>
+                                        <td class="lang-cell">
+                                                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" class="lang-link">
+                                                        <div class="lang-icon">🎨</div>
+                                                        <div class="lang-name">CSS</div>
+                                                        <div class="lang-desc">Web Styling</div>
+                                                </a>
+                                        </td>
+                                        <td class="lang-cell">
+                                                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" class="lang-link">
+                                                        <div class="lang-icon">☕</div>
+                                                        <div class="lang-name">JavaScript</div>
+                                                        <div class="lang-desc">Web Interactivity</div>
+                                                </a>
+                                        </td>
+                                        <td class="lang-cell">
+                                                <a href="https://react.dev/" target="_blank" class="lang-link">
+                                                        <div class="lang-icon">⚛️</div>
+                                                        <div class="lang-name">React</div>
+                                                        <div class="lang-desc">UI Framework</div>
+                                                </a>
+                                        </td>
+                                </tr>
+
+                                <!-- Databases Section -->
+                                <tr>
+                                        <th colspan="4">Database Technologies</th>
+                                </tr>
+                                <tr>
+                                        <td class="lang-cell">
+                                                <a href="https://dev.mysql.com/doc/" target="_blank" class="lang-link">
+                                                        <div class="lang-icon">🐬</div>
+                                                        <div class="lang-name">MySQL</div>
+                                                        <div class="lang-desc">Relational DB</div>
+                                                </a>
+                                        </td>
+                                        <td class="lang-cell">
+                                                <a href="https://www.postgresql.org/docs/" target="_blank" class="lang-link">
+                                                        <div class="lang-icon">🐘</div>
+                                                        <div class="lang-name">PostgreSQL</div>
+                                                        <div class="lang-desc">Advanced SQL</div>
+                                                </a>
+                                        </td>
+                                        <td class="lang-cell">
+                                                <a href="https://docs.mongodb.com/" target="_blank" class="lang-link">
+                                                        <div class="lang-icon">🍃</div>
+                                                        <div class="lang-name">MongoDB</div>
+                                                        <div class="lang-desc">NoSQL Document</div>
+                                                </a>
+                                        </td>
+                                        <td class="lang-cell">
+                                                <a href="https://redis.io/docs/" target="_blank" class="lang-link">
+                                                        <div class="lang-icon">🔴</div>
+                                                        <div class="lang-name">Redis</div>
+                                                        <div class="lang-desc">In-Memory Cache</div>
+                                                </a>
+                                        </td>
                                 </tr>
                         </tbody>
                         <tfoot>
-                                <th colspan="3"><a href="topics.html">See more details on the Topics page</a></th>
+                                <th colspan="4"><a href="topics.html">See more details on the Topics page</a></th>
                         </tfoot>
                 </table>
+
+                <!-- Learning Tips Article -->
+                <article>
+                        <h2>Learning Tips for <span class="highlight">Beginners</span></h2>
+                        <p>Starting your <em>programming journey</em> can be overwhelming, but with the right approach, you can master any language. Here are some <b>essential tips</b>:</p>
+                        <ul>
+                                <li><u>Practice daily</u> - Even <i>15 minutes</i> of coding practice can make a difference</li>
+                                <li><strong>Start with fundamentals</strong> - Master variables, loops, and functions before moving to advanced topics</li>
+                                <li><em>Build projects</em> - Apply what you learn by creating real applications</li>
+                                <li>Join communities - Connect with other learners and experienced developers</li>
+                        </ul>
+                </article>
+
+                <!-- Sidebar with Quick Links -->
+                <aside>
+                        <h3>Quick Links</h3>
+                        <ul>
+                                <li><a href="#beginner-guides">Beginner Guides</a></li>
+                                <li><a href="#practice-exercises">Practice Exercises</a></li>
+                                <li><a href="#code-examples">Code Examples</a></li>
+                                <li><a href="#community-forum">Community Forum</a></li>
+                        </ul>
+                        <div class="featured-topic">
+                                <h4><b>Featured Topic:</b> <em>Python Basics</em></h4>
+                                <p>Learn the fundamentals of <span class="lang-name">Python</span> programming with our interactive tutorials.</p>
+                        </div>
+                </aside>
         </main>
 
         <footer>
