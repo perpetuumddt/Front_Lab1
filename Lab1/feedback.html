@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <title>HelloWorld! - Feedback</title>
+        <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+                <div style="display: flex; align-items: center; gap: 16px;">
+                        <img src="img/HelloworldLogo.png" alt="HelloWorld!" style="height: 120x; width: 280px;">
+                        <span id="title" style="margin: 0;">Your guide to the IT world!</h1> 
+                </div>
+                <nav>
+                        <ul>
+                        <li><a href="index.html">Home Page</a></li>
+                        <li><a href="topics.html">Learning Topics</a></li>
+                        <li><a href="feedback.html">Feedback</a></li>
+                        </ul>
+                </nav>
+                <div class="header-buttons">
+                        <button>Log in</button>
+                        <button>Sign in</button>
+                </div>
+        </header>
+
+    <main>
+        <section class="feedback-form">
+            <h2>We Value Your <span class="highlight">Feedback</span></h2>
+            
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">First Name *</label>
+                            <input type="text" id="firstName" name="firstName" required placeholder="Enter your first name">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="lastName">Last Name *</label>
+                            <input type="text" id="lastName" name="lastName" required placeholder="Enter your last name">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="age">Age *</label>
+                        <input type="number" id="age" name="age" min="10" max="120" required placeholder="Enter your age">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Do you already study programming? *</label>
+                        <div class="radio-group">
+                            <div class="radio-option">
+                                <input type="radio" id="studying" name="programmingStatus" value="studying" required>
+                                <label for="studying">Yes, I'm studying</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="programmer" name="programmingStatus" value="programmer">
+                                <label for="programmer">I'm a programmer already</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="planning" name="programmingStatus" value="planning">
+                                <label for="planning">I'm planning to start</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="no" name="programmingStatus" value="no">
+                                <label for="no">No</label>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <div class="form-group">
+                    <label for="purpose">The Purpose of Feedback *</label>
+                    <select id="purpose" name="purpose" required>
+                        <option value="">-- Select a purpose --</option>
+                        <option value="collaboration">Collaboration</option>
+                        <option value="complaint">Complaint</option>
+                        <option value="suggestion">Suggestion</option>
+                        <option value="error">Error</option>
+                        <option value="help">Need help</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="details">Details *</label>
+                    <textarea 
+                        id="details" 
+                        name="details" 
+                        required 
+                        maxlength="500" 
+                        placeholder="Please provide details about your feedback (max 500 characters)"
+                        oninput="updateCharCounter()"></textarea>
+                    <div class="char-counter">
+                        <span id="charCount">0</span> / 500 characters
+                    </div>
+                </div>
+
+                <div class="checkbox-group">
+                    <input type="checkbox" id="agreement" name="agreement" required>
+                    <label for="agreement">I agree to the processing of my personal information *</label>
+                </div>
+
+                <button type="submit" class="submit-btn">Submit Feedback</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <h3>Contacts:</h3>
+        <p>Address: Kyiv, Vygadana St., 12</p>
+        <p>Phones: +38 (68) 123-45-67, +38 (067) 987-65-43</p>
+        <p>Email: cogito.erge.sum0@gmail.com</p>
+    </footer>
+
+    <script>
+        function updateCharCounter() {
+            const textarea = document.getElementById('details');
+            const charCount = document.getElementById('charCount');
+            charCount.textContent = textarea.value.length;
+        }
+    </script>
+</body>
+</html>
