@@ -19,11 +19,6 @@ header {
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
-header h1 {
-    color: #ecf0f1;
-    text-shadow: 2px 2px 1px #34495e;
-}
-
 nav ul {
     display: flex;
     list-style: none;
@@ -33,7 +28,7 @@ nav ul {
 
 nav a {
     color: #e0e5e9;
-    text-shadow: 0 2px 2px #055a288a;
+    text-shadow: 2px 2px 2px #125c318a;
     text-decoration: none;
     padding: 16px 16px;
     border-radius: 5px;
@@ -248,15 +243,12 @@ aside a:hover {
 
 .lang-cell {
     width: 80px;
-    padding: 10px 5px !important;
-    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%) !important;
-    border: 2px solid rgba(255,255,255,0.5);
+    padding: 10px 5px;
+    background: #f7faf7;
     border-radius: 12px;
-    margin: 2px;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    position: relative;
     overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 .lang-cell::before {
@@ -320,18 +312,6 @@ aside a:hover {
     color: #34495e;
 }
 
-/* Empty cell styling */
-.lang-cell-empty {
-    width: 80px;
-    padding: 10px 5px !important;
-    background: transparent !important;
-    border: none !important;
-    box-shadow: none !important;
-}
-
-
-
-/* Language cell links */
 .lang-link {
     text-decoration: none;
     color: inherit;
@@ -351,6 +331,98 @@ aside a:hover {
     color: inherit;
 }
 
+/*============Big Table==================*/
+
+.big-table {
+    width: 90%;
+    margin: 30px auto;
+    border-collapse: separate;
+    border-spacing: 15px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.big-table th {
+    background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
+    color: white;
+    font-size: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    letter-spacing: 1px;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+.big-table td {
+    background: linear-gradient(135deg, #ffffff 0%, #f9f9f9 100%);
+    border: 1px solid rgba(0,0,0,0.05);
+    border-radius: 12px;
+    padding: 20px;
+    transition: all 0.3s ease;
+    vertical-align: top;
+}
+
+.big-table td:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+/* Категорії рівнів */
+.big-table .category-header {
+    background: linear-gradient(135deg, #34495e 0%, #2c3e50 100%);
+    color: #ecf0f1;
+    font-size: 22px;
+    text-transform: uppercase;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+/* Комірки мов */
+.big-table .lang-cell {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    padding: 15px;
+}
+
+.big-table .lang-icon {
+    width: 80px;
+    height: 80px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.big-table .lang-name {
+    font-size: 16px;
+    font-weight: 700;
+    color: #2c3e50;
+}
+
+.big-table .lang-desc {
+    font-size: 13px;
+    color: #7f8c8d;
+    font-style: italic;
+}
+
+/* Вертикальне розміщення секцій */
+.big-table-section {
+    margin-bottom: 30px;
+}
+
+.big-table-section h3 {
+    font-size: 22px;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 15px;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
 
 /* ===============Footer================== */
 footer {
@@ -377,7 +449,6 @@ footer p {
 }
 
 /* ===============Utility Classes================== */
-/* Text highlighting and emphasis utilities */
 .highlight {
     background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
     color: white;
@@ -409,6 +480,9 @@ footer p {
     text-shadow: 0 1px 2px rgba(0,0,0,0.1);
 }
 
+a:visited {
+    color: #08361b;
+}
 
 /* Scroll indicator */
 .table-container::after {
@@ -421,40 +495,44 @@ footer p {
     font-style: italic;
 }
 
-@media (max-width: 768px) {
-    .small-table {
-        font-size: 12px;
-        border-spacing: 5px;
-        max-width: 100%;
-        margin: 10px;
-        padding: 10px;
-    }
-    
-    .lang-cell {
-        width: 70px;
-        padding: 8px 3px !important;
-    }
-    
-    .lang-cell-empty {
-        width: 70px;
-        padding: 8px 3px !important;
-    }
-    
-    .lang-icon {
-        font-size: 24px;
-        height: 30px;
-    }
-    
-    .lang-name {
-        font-size: 11px;
-    }
-    
-    .lang-desc {
-        font-size: 9px;
-    }
-    
-    .small-table tbody th {
-        font-size: 14px;
-        padding: 12px;
-    }
+
+/* ================== SELECTORS, COMBINATORS ================== */
+
+/* Selectors */
+/* ID Selector */
+#title {
+    font-size: 32px;
+    font-weight: 600;
+    color: hsl(120, 19%, 92%);
+    text-shadow: 2px 2px 1px #34495e;
+    text-align: center;
+    animation: colorChange 5s infinite;
+}
+
+/*Attr Selector */
+a[href] {
+    color: rgb(35, 175, 101);
+}
+
+a[href^="https"] {
+    text-shadow: 0px 5px 5px #125c318a;
+}
+/* combinators */
+header > nav {
+    border-top: 2px solid #219b53;
+    border-bottom:2px solid #219b53;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+h2 + p {
+    font-style: italic;
+    color: rgb(40, 80, 40);
+}
+
+/* animation */
+@keyframes colorChange {
+    0% { color: hsl(120, 19%, 92%); text-shadow:  2px 2px 1px #34495e; }
+    50% { color: hsl(120, 66%, 39%); text-shadow: 2px 2px 10px #3ab960;}
+    100% { color: hsl(120, 19%, 92%); text-shadow: 2px 2px 1px #34495e;}
 }

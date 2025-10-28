@@ -1,16 +1,15 @@
-
+<!doctype html>
 <html lang="en">
-
 <head>
-        <meta charset="UTF-8">
-        <title>HelloWorld!</title>
-        <link rel="stylesheet" href="styles.css">
+    <meta charset="utf-8">
+    <title>HelloWorld! - Topics</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-        <header>
-                <div>
-                        <h1>HelloWorld! - Your guide to the IT world!</h1>
+    <header>
+                <div style="display: flex; align-items: center; gap: 16px;">
+                        <img src="img/HelloworldLogo.png" alt="HelloWorld!" style="height: 120x; width: 280px;">
+                        <h1 style="margin: 0;">Your guide to the IT world!</h1> 
                 </div>
                 <nav>
                         <ul>
@@ -24,365 +23,253 @@
                         <button>Sign in</button>
                 </div>
         </header>
-        
-        <table>
-                <caption>Here you can choose programming language and topics to learn</caption>
-                        <!-- Верхние заголовки категорий -->
-                        <tr>
-                                <th colspan="5">Programming languages</th>
-                                <th colspan="3">Frontend</th>
-                                <th colspan="4">Databases</th>
-                        </tr>
 
-                        <!-- Названия технологий -->
-                        <tr>
-                                <th>C#</th>
-                                <th>C++</th>
-                                <th>Python</th>
-                                <th>Java</th>
-                                <th>Go</th>
+    <main>
+        <section style="margin-top:20px; text-align:center;">
+            <h2>Choose a technology and follow the learning path</h2>
+        </section>
 
-                                <th>HTML</th>
-                                <th>CSS</th>
-                                <th>JavaScript</th>
+        <!-- ---------------- Programming Languages ---------------- -->
+        <section class="big-table-section">
+            <table class="big-table" aria-label="Programming Languages">
+                <thead>
+                    <tr>
+                        <th colspan="4">Programming Languages</th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <img src="img/csharp.png" alt="C#" style="height: 100x; width: 100px;" >
+                            <div class="lang-name">C#</div>
+                        </th>
+                        <th>
+                            <img src="img/python.png" alt="C#" style="height: 100x; width: 100px;" >
+                            <div class="lang-name">Python</div>
+                        </th>
+                        <th>
+                            <img src="img/java.png" alt="C#" style="height: 100x; width: 100px;" >
+                            <div class="lang-name">Java</div>
+                        </th>
+                        <th>
+                            <img src="img/go.png" alt="C#" style="height: 100x; width: 100px;" >
+                            <div class="lang-name">Go</div>
+                        </th>
+                    </tr>
+                </thead>
 
-                                <th>MySQL</th>
-                                <th>PostgreSQL</th>
-                                <th>MongoDB</th>
-                                <th>Redis</th>
-                        </tr>
+                <tbody>
+                    <tr>
+                        <th colspan="4" class="category-header">Beginner</th>
+                    </tr>
+                    <tr>
+                        <td class="topic-cell">Syntax & variables</td>
+                        <td class="topic-cell">Data types & lists</td>
+                        <td class="topic-cell">Classes & objects</td>
+                        <td class="topic-cell">Basics & packages</td>
+                    </tr>
+                    <tr>
+                        <td class="topic-cell">Control flow</td>
+                        <td class="topic-cell">Functions</td>
+                        <td class="topic-cell">Methods</td>
+                        <td class="topic-cell">Slices & maps</td>
+                    </tr>
+                    <tr>
+                        <td class="topic-cell">Arrays & collections</td>
+                        <td class="topic-cell">I/O & modules</td>
+                        <td class="topic-cell">OOP basics</td>
+                        <td class="topic-cell">Simple goroutines</td>
+                    </tr>
 
-                        <!-- Beginner -->
-                        <tr>
-                                <!-- Beginner: C# -->
-                                <td>
-                                        <strong>Beginner</strong>
-                                        <ul>
-                                                <li>Syntax, variables, types</li>
-                                                <li>Control structures</li>
-                                                <li>Methods, arrays</li>
-                                        </ul>
-                                </td>
-                                <!-- Beginner: C++ -->
-                                <td>
-                                        <strong>Beginner</strong>
-                                        <ul>
-                                                <li>Syntax, compilation</li>
-                                                <li>Variables, arrays</li>
-                                                <li>STL introduction</li>
-                                        </ul>
-                                </td>
-                                <!-- Beginner: Python -->
-                                <td>
-                                        <strong>Beginner</strong>
-                                        <ul>
-                                                <li>Syntax, data types</li>
-                                                <li>Lists, dictionaries</li>
-                                                <li>Functions</li>
-                                        </ul>
-                                </td>
-                                <!-- Beginner: Java -->
-                                <td>
-                                        <strong>Beginner</strong>
-                                        <ul>
-                                                <li>Java syntax</li>
-                                                <li>Operators, conditionals</li>
-                                                <li>Classes and objects (OOP basics)</li>
-                                        </ul>
-                                </td>
-                                <!-- Beginner: Go -->
-                                <td>
-                                        <strong>Beginner</strong>
-                                        <ul>
-                                                <li>Go syntax</li>
-                                                <li>Variables, slices, maps</li>
-                                                <li>Simple goroutines</li>
-                                        </ul>
-                                </td>
-                                <!-- Beginner: HTML -->
-                                <td>
-                                        <strong>Beginner</strong>
-                                        <ul>
-                                                <li>HTML document structure</li>
-                                                <li>Tags, links, images</li>
-                                                <li>Forms</li>
-                                        </ul>
-                                </td>
-                                <!-- Beginner: CSS -->
-                                <td>
-                                        <strong>Beginner</strong>
-                                        <ul>
-                                                <li>Selectors, box model</li>
-                                                <li>Fonts and colors</li>
-                                                <li>Basic layout</li>
-                                        </ul>
-                                </td>
-                                <!-- Beginner: JavaScript -->
-                                <td>
-                                        <strong>Beginner</strong>
-                                        <ul>
-                                                <li>Variables, functions</li>
-                                                <li>DOM manipulation (basics)</li>
-                                                <li>Events</li>
-                                        </ul>
-                                </td>
-                                <!-- Beginner: MySQL -->
-                                <td>
-                                        <strong>Beginner</strong>
-                                        <ul>
-                                                <li>SELECT/INSERT/UPDATE/DELETE</li>
-                                                <li>Simple queries</li>
-                                        </ul>
-                                </td>
-                                <!-- Beginner: PostgreSQL -->
-                                <td>
-                                        <strong>Beginner</strong>
-                                        <ul>
-                                                <li>Basic queries</li>
-                                                <li>Creating tables, data types</li>
-                                        </ul>
-                                </td>
-                                <!-- Beginner: MongoDB -->
-                                <td>
-                                        <strong>Beginner</strong>
-                                        <ul>
-                                                <li>JSON documents</li>
-                                                <li>CRUD operations</li>
-                                        </ul>
-                                </td>
-                                <!-- Beginner: Redis -->
-                                <td>
-                                        <strong>Beginner</strong>
-                                        <ul>
-                                                <li>Key-value, basic commands</li>
-                                                <li>Simple caching</li>
-                                        </ul>
-                                </td>
-                        </tr>
+                    <tr>
+                        <th colspan="4" class="category-header">Intermediate</th>
+                    </tr>
+                    <tr>
+                        <td class="topic-cell">OOP, inheritance</td>
+                        <td class="topic-cell">OOP & modules</td>
+                        <td class="topic-cell">Threads & collections</td>
+                        <td class="topic-cell">Channels & testing</td>
+                    </tr>
+                    <tr>
+                        <td class="topic-cell">LINQ, async/await</td>
+                        <td class="topic-cell">Virtual env, packages</td>
+                        <td class="topic-cell">Exceptions & I/O</td>
+                        <td class="topic-cell">Concurrency patterns</td>
+                    </tr>
 
-                        <!-- Intermediate -->
-                        <tr>
-                                <td>
-                                        <strong>Intermediate</strong>
-                                        <ul>
-                                                <li>OOP, inheritance, interfaces</li>
-                                                <li>LINQ</li>
-                                                <li>Async/await, exceptions</li>
-                                        </ul>
-                                </td>
-                                <td>
-                                        <strong>Intermediate</strong>
-                                        <ul>
-                                                <li>OOP and design patterns</li>
-                                                <li>Smart pointers, RAII</li>
-                                                <li>Templates, advanced STL</li>
-                                        </ul>
-                                </td>
-                                <td>
-                                        <strong>Intermediate</strong>
-                                        <ul>
-                                                <li>Modules and packages</li>
-                                                <li>OOP in Python</li>
-                                                <li>Virtual environments, exceptions</li>
-                                        </ul>
-                                </td>
-                                <td>
-                                        <strong>Intermediate</strong>
-                                        <ul>
-                                                <li>Collections, generics</li>
-                                                <li>Threads, synchronization</li>
-                                                <li>File I/O and exceptions</li>
-                                        </ul>
-                                </td>
-                                <td>
-                                        <strong>Intermediate</strong>
-                                        <ul>
-                                                <li>Interfaces, packages</li>
-                                                <li>Channels and synchronization</li>
-                                                <li>Modules and testing</li>
-                                        </ul>
-                                </td>
-                                <td>
-                                        <strong>Intermediate</strong>
-                                        <ul>
-                                                <li>Semantic markup</li>
-                                                <li>Media elements, advanced forms</li>
-                                                <li>Accessibility</li>
-                                        </ul>
-                                </td>
-                                <td>
-                                        <strong>Intermediate</strong>
-                                        <ul>
-                                                <li>Flexbox, Grid</li>
-                                                <li>Responsive design</li>
-                                                <li>CSS architecture (BEM)</li>
-                                        </ul>
-                                </td>
-                                <td>
-                                        <strong>Intermediate</strong>
-                                        <ul>
-                                                <li>ES6+ (arrow functions, promises)</li>
-                                                <li>Fetch/AJAX</li>
-                                                <li>Modules and build tools</li>
-                                        </ul>
-                                </td>
-                                <td>
-                                        <strong>Intermediate</strong>
-                                        <ul>
-                                                <li>JOINs, aggregate functions</li>
-                                                <li>Indexes, normalization</li>
-                                                <li>Transactions</li>
-                                        </ul>
-                                </td>
-                                <td>
-                                        <strong>Intermediate</strong>
-                                        <ul>
-                                                <li>Functions, transactions</li>
-                                                <li>Indexes and query planning</li>
-                                                <li>Advanced data types</li>
-                                        </ul>
-                                </td>
-                                <td>
-                                        <strong>Intermediate</strong>
-                                        <ul>
-                                                <li>Aggregations, indexes</li>
-                                                <li>Data modeling</li>
-                                                <li>Query optimization</li>
-                                        </ul>
-                                </td>
-                                <td>
-                                        <strong>Intermediate</strong>
-                                        <ul>
-                                                <li>Lists, sets, hashes</li>
-                                                <li>Persistence (AOF/RDB)</li>
-                                                <li>Advanced caching</li>
-                                        </ul>
-                                </td>
-                        </tr>
+                    <tr>
+                        <th colspan="4" class="category-header">Advanced</th>
+                    </tr>
+                    <tr>
+                        <td class="topic-cell">ASP.NET Core, EF</td>
+                        <td class="topic-cell">Django / AsyncIO / ML</td>
+                        <td class="topic-cell">Spring Boot, profiling</td>
+                        <td class="topic-cell">Networking & deployment</td>
+                    </tr>
+                    <tr>
+                        <td class="topic-cell">Design patterns, DI</td>
+                        <td class="topic-cell">Data science stacks</td>
+                        <td class="topic-cell">High-load systems</td>
+                        <td class="topic-cell">Docker / Kubernetes</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
 
-                        <!-- Advanced -->
-                        <tr>
-                                <td>
-                                        <strong>Advanced</strong>
-                                        <ul>
-                                                <li>ASP.NET Core, Web API</li>
-                                                <li>Entity Framework Core</li>
-                                                <li>Dependency Injection, design patterns</li>
-                                        </ul>
-                                </td>
-                                <td>
-                                        <strong>Advanced</strong>
-                                        <ul>
-                                                <li>Move semantics, optimization</li>
-                                                <li>Multithreading and synchronization</li>
-                                                <li>Template metaprogramming</li>
-                                        </ul>
-                                </td>
-                                <td>
-                                        <strong>Advanced</strong>
-                                        <ul>
-                                                <li>Django/Flask, web development</li>
-                                                <li>Asyncio, concurrency</li>
-                                                <li>Data Science: NumPy, Pandas, ML</li>
-                                        </ul>
-                                </td>
-                                <td>
-                                        <strong>Advanced</strong>
-                                        <ul>
-                                                <li>Spring/Spring Boot</li>
-                                                <li>JVM tuning, profiling</li>
-                                                <li>High-load systems</li>
-                                        </ul>
-                                </td>
-                                <td>
-                                        <strong>Advanced</strong>
-                                        <ul>
-                                                <li>Server development, networking</li>
-                                                <li>Profiling and optimization</li>
-                                                <li>Deployment (Docker/Kubernetes)</li>
-                                        </ul>
-                                </td>
-                                <td>
-                                        <strong>Advanced</strong>
-                                        <ul>
-                                                <li>Performance optimization</li>
-                                                <li>SEO, microdata</li>
-                                                <li>Templating and SSR</li>
-                                        </ul>
-                                </td>
-                                <td>
-                                        <strong>Advanced</strong>
-                                        <ul>
-                                                <li>Animations, transformations</li>
-                                                <li>CSS-in-JS, preprocessors (Sass)</li>
-                                                <li>Large project architecture</li>
-                                        </ul>
-                                </td>
-                                <td>
-                                        <strong>Advanced</strong>
-                                        <ul>
-                                                <li>Modern frameworks (React/Vue/Angular)</li>
-                                                <li>State management, testing</li>
-                                                <li>SSR, loading optimization</li>
-                                        </ul>
-                                </td>
-                                <td>
-                                        <strong>Advanced</strong>
-                                        <ul>
-                                                <li>Replication, backup</li>
-                                                <li>Complex query optimization</li>
-                                                <li>Big data storage and analysis</li>
-                                        </ul>
-                                </td>
-                                <td>
-                                        <strong>Advanced</strong>
-                                        <ul>
-                                                <li>JSONB, CTE, advanced indexes</li>
-                                                <li>Parallel queries, tuning</li>
-                                                <li>Extensions (PostGIS, etc.)</li>
-                                        </ul>
-                                </td>
-                                <td>
-                                        <strong>Advanced</strong>
-                                        <ul>
-                                                <li>Replication, sharding</li>
-                                                <li>Scalability design</li>
-                                                <li>Aggregation optimization</li>
-                                        </ul>
-                                </td>
-                                <td>
-                                        <strong>Advanced</strong>
-                                        <ul>
-                                                <li>Redis clustering</li>
-                                                <li>Pub/Sub, Lua scripts</li>
-                                                <li>Caching strategies and resilience</li>
-                                        </ul>
-                                </td>
-                        </tr>
+        <!-- ---------------- Frontend Technologies ---------------- -->
+        <section class="big-table-section">
+            <table class="big-table" aria-label="Frontend Technologies">
+                <thead>
+                    <tr><th colspan="3">Frontend Technologies</th></tr>
+                    <tr>
+                        <th>
+                            <img src="img/html.png" alt="C#" style="height: 100x; width: 100px;" >
+                            <div class="lang-name">HTML</div>
+                        </th>
+                        <th>
+                            <img src="img/css.png" alt="C#" style="height: 100x; width: 100px;" >
+                            <div class="lang-name">CSS</div>
+                        </th>
+                        <th>
+                            <img src="img/js.png" alt="C#" style="height: 100x; width: 100px;" >
+                            <div class="lang-name">JavaScript</div>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><th colspan="3" class="category-header">Beginner</th></tr>
+                    <tr>
+                        <td class="topic-cell">Document structure</td>
+                        <td class="topic-cell">Selectors & box model</td>
+                        <td class="topic-cell">Variables & DOM</td>
+                    </tr>
+                    <tr>
+                        <td class="topic-cell">Tags & forms</td>
+                        <td class="topic-cell">Fonts & colors</td>
+                        <td class="topic-cell">Events & handlers</td>
+                    </tr>
+                    <tr>
+                        <td class="topic-cell">Semantic HTML</td>
+                        <td class="topic-cell">Basic layout</td>
+                        <td class="topic-cell">Basic fetch/AJAX</td>
+                    </tr>
 
-                </table>
+                    <tr><th colspan="3" class="category-header">Intermediate</th></tr>
+                    <tr>
+                        <td class="topic-cell">Accessibility</td>
+                        <td class="topic-cell">Flexbox & Grid</td>
+                        <td class="topic-cell">ES6+, modules</td>
+                    </tr>
+                    <tr>
+                        <td class="topic-cell">Media & forms</td>
+                        <td class="topic-cell">Responsive design</td>
+                        <td class="topic-cell">Build tools</td>
+                    </tr>
 
-                <!-- Learning Path Article -->
-                <article>
-                        <h2>Choose Your <span class="highlight">Learning Path</span></h2>
-                        <p>Our comprehensive curriculum is designed to take you from <em>beginner</em> to <b>advanced</b> level in any programming language. Each level builds upon the previous one, ensuring a solid foundation.</p>
-                        <ul>
-                                <li><u>Beginner Level</u> - Master the <i>fundamentals</i> and basic syntax</li>
-                                <li><strong>Intermediate Level</strong> - Learn advanced concepts and <em>best practices</em></li>
-                                <li><span class="tip">Advanced Level</span> - Become proficient with <b>real-world applications</b></li>
-                        </ul>
-                </article>
+                    <tr><th colspan="3" class="category-header">Advanced</th></tr>
+                    <tr>
+                        <td class="topic-cell">SEO & templating</td>
+                        <td class="topic-cell">SASS & animations</td>
+                        <td class="topic-cell">Frameworks (React)</td>
+                    </tr>
+                    <tr>
+                        <td class="topic-cell">Performance</td>
+                        <td class="topic-cell">Architecture</td>
+                        <td class="topic-cell">SSR & testing</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
 
-                <!-- Sidebar with Resources -->
-                <aside>
-                        <h3>Learning Resources</h3>
-                        <ul>
-                                <li><a href="#video-tutorials">Video Tutorials</a></li>
-                                <li><a href="#interactive-exercises">Interactive Exercises</a></li>
-                                <li><a href="#code-challenges">Code Challenges</a></li>
-                                <li><a href="#project-gallery">Project Gallery</a></li>
-                        </ul>
-                </aside>
+        <!-- ---------------- Databases ---------------- -->
+        <section class="big-table-section">
+            <table class="big-table" aria-label="Databases">
+                <thead>
+                    <tr><th colspan="3">Databases</th></tr>
+                    <tr>
+                        <th>
+                           <img src="img/mysql.png" alt="C#" style="height: 100x; width: 100px;" >
+                            <div class="lang-name">MySQL</div>
+                        </th>
+                        <th>
+                            <img src="img/postgres.png" alt="C#" style="height: 100x; width: 100px;" >
+                            <div class="lang-name">PostgreSQL</div>
+                        </th>
+                        <th>
+                            <img src="img/mongodb.png" alt="C#" style="height: 100x; width: 100px;" >
+                            <div class="lang-name">MongoDB</div>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><th colspan="3" class="category-header">Beginner</th></tr>
+                    <tr>
+                        <td class="topic-cell">SELECT/INSERT basics</td>
+                        <td class="topic-cell">Tables & types</td>
+                        <td class="topic-cell">JSON documents</td>
+                    </tr>
+                    <tr>
+                        <td class="topic-cell">Simple queries</td>
+                        <td class="topic-cell">Creating tables</td>
+                        <td class="topic-cell">CRUD operations</td>
+                    </tr>
+                    <tr>
+                        <td class="topic-cell">Indexes intro</td>
+                        <td class="topic-cell">Basic functions</td>
+                        <td class="topic-cell">Data modeling basics</td>
+                    </tr>
+
+                    <tr><th colspan="3" class="category-header">Intermediate</th></tr>
+                    <tr>
+                        <td class="topic-cell">JOINs & transactions</td>
+                        <td class="topic-cell">Performance tuning</td>
+                        <td class="topic-cell">Aggregation framework</td>
+                    </tr>
+                    <tr>
+                        <td class="topic-cell">Normalization</td>
+                        <td class="topic-cell">Indexes & planning</td>
+                        <td class="topic-cell">Replication basics</td>
+                    </tr>
+
+                    <tr><th colspan="3" class="category-header">Advanced</th></tr>
+                    <tr>
+                        <td class="topic-cell">Clustering & HA</td>
+                        <td class="topic-cell">CTE, JSONB, extensions</td>
+                        <td class="topic-cell">Sharding & scaling</td>
+                    </tr>
+                    <tr>
+                        <td class="topic-cell">Backup/restore strategies</td>
+                        <td class="topic-cell">Parallel queries & tuning</td>
+                        <td class="topic-cell">Aggregation optimization</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <article>
+            <h2>Choose Your <span class="highlight">Learning Path</span></h2>
+            <p>Our structured program helps you progress from beginner to advanced in any technology you choose.</p>
+            <ul>
+                <li><u>Beginner</u> – Learn core concepts and syntax</li>
+                <li><b>Intermediate</b> – Understand structure and architecture</li>
+                <li><span class="tip">Advanced</span> – Build complex, real-world applications</li>
+            </ul>
+        </article>
+
+        <aside>
+            <h3>Learning Resources</h3>
+            <ul>
+                <li><a href="#video-tutorials">Video Tutorials</a></li>
+                <li><a href="#interactive-exercises">Interactive Exercises</a></li>
+                <li><a href="#code-challenges">Code Challenges</a></li>
+                <li><a href="#project-gallery">Project Gallery</a></li>
+            </ul>
+        </aside>
+    </main>
+
+    <footer>
+        <h3>Contacts:</h3>
+        <p>Address: Kyiv, Vygadana St., 12</p>
+        <p>Phones: +38 (68) 123-45-67, +38 (067) 987-65-43</p>
+        <p>Email: cogito.erge.sum0@gmail.com</p>
+    </footer>
 </body>
-
 </html>
