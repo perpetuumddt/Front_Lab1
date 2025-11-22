@@ -4,6 +4,362 @@
         <meta charset="UTF-8">
         <title>HelloWorld!</title>
         <link rel="stylesheet" href="styles.css">
+
+        <style>
+                :root {
+                        --header-offset: clamp(360px, 20vw + 200px, 560px);
+                }
+
+                *, *::before, *::after {
+                        box-sizing: border-box;
+                }
+
+                /* GRID-КОНТЕЙНЕР: Основна сторінка */
+                body {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr auto;
+            grid-template-areas:
+                "main"
+                "footer";
+            min-height: 100vh;
+            gap: 10px;
+            position: relative; /* Для абсолютного позиціонування header */
+            margin: 0;
+            padding: var(--header-offset) clamp(12px, 4vw, 24px) 0;
+            overflow-x: hidden;
+        }
+        
+                header {
+                        grid-area: header;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        z-index: 1000;
+                }
+        
+                main {
+                        grid-area: main;
+                        display: grid;
+                        grid-template-columns: repeat(12, minmax(0, 1fr));
+                        grid-auto-rows: minmax(100px, auto);
+                        gap: 20px;
+                        padding: 0;
+                        margin-top: 0;
+                }
+
+                main > * {
+                        grid-column: 1 / -1;
+                }
+        
+
+                /* ABOUT US  */
+                #about-us-section {
+                        /* ЗОВНІШНІ відступи (сусідні блоки) */
+                        margin: 10px 0;
+    
+                        /* БЕЗ ВНУТРІШНІХ відступів від рамки блоку */
+                        padding: 0 18px 24px;
+    
+                        background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+                        border-radius: 12px;
+                        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+                        border: 1px solid rgba(46, 204, 113, 0.2);
+                }
+                /* Padding лише для заголовку */
+                #about-us-section h2 {
+                        padding: 25px 0 15px;
+                        margin: 0;
+                }
+                /* Padding лише для списку */
+                #about-us-section ol,
+                #about-us-section ul {
+                        padding: 15px 0;
+                        margin: 0;
+                }
+        
+        
+                .small-table {
+                        grid-column: 1 / 13;
+        
+                        display: grid;
+                        grid-template-columns: repeat(4, 1fr);
+                        grid-template-rows: auto auto auto auto auto auto;
+                        gap: 8px;
+        
+                        font-size: 14px;
+                        background: rgba(166, 245, 148, 0.301);
+                        border-radius: 15px;
+                        padding: 15px;
+                        margin: 20px auto;
+                }
+        
+                .small-table th,
+                .small-table td {
+                        padding: 8px;
+                        text-align: center;
+                        vertical-align: top;
+                        border-radius: 10px;
+                }
+        
+                .small-table thead {
+                        grid-column: 2 / 4;
+                        grid-row: 1 / 2;
+                        display: grid;
+                }
+        
+                /* Small Table Header */
+                .small-table thead th {
+                        background: linear-gradient(135deg, #929292 0%, #474747 100%);
+                        color: #f3f3f3;
+                        text-shadow: 0 3px 3px #333;
+                        font-size: 20px;
+                        padding: 20px;
+                        border-radius: 10px;
+                        letter-spacing: 1px;
+                }
+        
+                .small-table tbody {
+                        grid-column: 1 / 5;
+                        grid-row: 2 / 6;
+                        display: grid;
+                        grid-template-columns: repeat(4, 1fr);
+                        gap: 8px;
+                }
+        
+                /* Заголовок секції Programming Languages */
+                .small-table tbody tr:nth-child(1) {
+                        grid-column: 1 / 5;
+                        display: grid;
+                }
+        
+                .small-table tbody tr:nth-child(1) th {
+                        background: #bbbbbb;
+                        color: #f3f3f3;
+                        font-size: 18px;
+                        padding: 15px;
+                        text-shadow: 0 3px 4px rgba(0, 0, 0, 0.822);
+                        letter-spacing: 1px;
+                        border-radius: 10px;
+                        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                }
+        
+                /* Комірки з мовами програмування */
+                .small-table tbody tr:nth-child(2) {
+                        grid-column: 1 / 5;
+                        display: grid;
+                        grid-template-columns: repeat(4, 1fr);
+                        gap: 8px;
+                }
+        
+                /* Заголовок Frontend */
+                .small-table tbody tr:nth-child(3) {
+                        grid-column: 1 / 5;
+                        display: grid;
+                }
+        
+                .small-table tbody tr:nth-child(3) th {
+                        background: #bbbbbb;
+                        color: #f3f3f3;
+                        font-size: 18px;
+                        padding: 15px;
+                        text-shadow: 0 3px 4px rgba(0, 0, 0, 0.822);
+                        letter-spacing: 1px;
+                        border-radius: 10px;
+                        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                }
+        
+                /* Комірки Frontend */
+                .small-table tbody tr:nth-child(4) {
+                        grid-column: 1 / 5;
+                        display: grid;
+                        grid-template-columns: repeat(4, 1fr);
+                        gap: 8px;
+                }
+        
+                /* Заголовок Databases */
+                .small-table tbody tr:nth-child(5) {
+                        grid-column: 1 / 5;
+                        display: grid;
+                }
+        
+                .small-table tbody tr:nth-child(5) th {
+                        background: #bbbbbb;
+                        color: #f3f3f3;
+                        font-size: 18px;
+                        padding: 15px;
+                        text-shadow: 0 3px 4px rgba(0, 0, 0, 0.822);
+                        letter-spacing: 1px;
+                        border-radius: 10px;
+                        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                }
+        
+                /* Комірки Databases */
+                .small-table tbody tr:nth-child(6) {
+                        grid-column: 1 / 5;
+                        display: grid;
+                        grid-template-columns: repeat(4, 1fr);
+                        gap: 8px;
+                }
+        
+                .small-table tfoot {
+                        grid-column: 2 / 4;
+                        grid-row: 6 / 7;
+                        display: grid;
+                }
+        
+                .small-table tfoot th {
+                        background: linear-gradient(135deg, #929292 0%, #474747 100%);
+                        color: #333;
+                        font-size: 14px;
+                        padding: 12px;
+                        border-radius: 10px;
+                        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                }
+        
+                .small-table tfoot a {
+                        color: #f3f3f3;
+                        font-size: 20px;
+                        text-shadow: 0 3px 3px #333;
+                        text-decoration: none;
+                        font-weight: bold;
+                        transition: color 0.3s ease;
+                }
+        
+                .small-table tfoot a:hover {
+                        color: #13df68;
+                }
+        
+                /* Стилі для комірок таблиці */
+                .lang-cell {
+                        padding: 10px 5px;
+                        background: #f7faf7;
+                        border-radius: 12px;
+                        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+                        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+                        text-align: center;
+                }
+        
+                .lang-cell:hover {
+                        transform: translateX(2vw) translateY(-10px) scale(1.05);
+                        box-shadow: -20px 30px 10px rgba(0, 0, 0, 0.15);
+                }
+        
+                .lang-icon {
+                        font-size: 28px;
+                        margin-bottom: 8px;
+                        height: 35px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+                        transition: transform 0.3s ease;
+                }
+        
+                .lang-cell:hover .lang-icon {
+                        transform: scale(1.2) rotate(5deg);
+                }
+        
+                .lang-name {
+                        font-weight: bold;
+                        font-size: 13px;
+                        color: #2c3e50;
+                        margin-bottom: 4px;
+                        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+                        transition: color 0.3s ease;
+                }
+        
+                .lang-cell:hover .lang-name {
+                        color: #1976d2;
+                }
+        
+                .lang-desc {
+                        font-size: 10px;
+                        color: #7f8c8d;
+                        line-height: 1.3;
+                        font-style: italic;
+                        transition: color 0.3s ease;
+                }
+        
+                .lang-cell:hover .lang-desc {
+                        color: #34495e;
+                }
+        
+                .lang-link {
+                        text-decoration: none;
+                        color: inherit;
+                        display: block;
+                }
+        
+                /* Article з порадами */
+                article,
+                aside {
+                        grid-column: 1 / -1;
+                }
+        
+
+                @media (min-width: 992px) {
+                        main {
+                                grid-template-columns: repeat(12, minmax(0, 1fr));
+                        }
+
+                        #about-us-section {
+                                margin: 10px 20px;
+                        }
+
+                        main>section:nth-of-type(1) {
+                                grid-column: 2 / 12;
+                        }
+
+                        main>section:nth-of-type(2) {
+                                grid-column: 2 / 7;
+                        }
+
+                        main>section:nth-of-type(3) {
+                                grid-column: 7 / 12;
+                        }
+
+                        main>section:nth-of-type(4) {
+                                grid-column: 4 / 10;
+                        }
+
+                        article {
+                                grid-column: 1 / 8;
+                        }
+
+                        aside {
+                                grid-column: 8 / 13;
+                        }
+                }
+
+                @media (max-width: 1200px) {
+                        main {
+                                grid-template-columns: repeat(8, minmax(0, 1fr));
+                        }
+                }
+
+        @media (max-width: 768px) {
+            main {
+                grid-template-columns: 1fr;
+                padding: 0 12px;
+            }
+
+            .small-table {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+                main {
+                grid-template-columns: 1fr;
+                padding: 0 12px;
+            }
+            .small-table {
+                grid-template-columns: 1fr;
+            }
+        }
+        </style>
 </head>
 
 <body>
@@ -26,7 +382,7 @@
         </header>
         <main>
                 <!--About Us-->
-                <section>
+                <section id="about-us-section">
                         <h2>About Us</h2>
                         <p><i>Learning a programming language is not an easy task. That's why <b>HelloWorld!</b> exists
                                         - a platform for those who want to enter the IT world in an effective and
@@ -36,7 +392,7 @@
                                         skills.</i></p>
                 </section>
                 <!--Our Goal-->
-                <section>
+                <section id="about-us-section">
                         <h2>Our Goal</h2>
                         <ol type="A">
                                 <li>Provide users with a convenient web portal for learning programming languages</li>
@@ -46,7 +402,7 @@
                         </ol>
                 </section>
                 <!--We Offer-->
-                <section>
+                <section id="about-us-section">
                         <h2>We Offer</h2>
                         <ul>
                                 <li>Constantly expanding catalog of language topics</li>
@@ -54,6 +410,11 @@
                                 <li>Your personal account for saving and tracking progress</li>
                                 <li>Links to the best learning resources</li>
                         </ul>
+                </section>
+                <!--Emoji-->
+                <section id="about-us-section">
+                        <h1>🙇➕🕐🟰🧑‍🎓🪘</h1>
+
                 </section>
 
                 <!-- Table -->

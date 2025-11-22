@@ -4,6 +4,76 @@
     <meta charset="utf-8">
     <title>HelloWorld! - Topics</title>
     <link rel="stylesheet" href="styles.css">
+
+    <style>
+        .big-table-section {
+            margin-bottom: 30px;
+        }
+    
+        .big-table {
+            width: 90%;
+            margin: 30px auto;
+            border-collapse: separate;
+            border-spacing: 15px;
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+    
+        .big-table th {
+            background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
+            color: white;
+            font-size: 20px;
+            padding: 15px;
+            border-radius: 10px;
+            letter-spacing: 1px;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+        }
+    
+        .big-table td {
+            background: linear-gradient(135deg, #ffffff 0%, #f9f9f9 100%);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            border-radius: 12px;
+            padding: 20px;
+            transition: all 0.3s ease;
+            vertical-align: top;
+            
+            border: 2px solid #8a2be2;
+            border-left: 4px dashed #8a2be2;
+            border-right: 4px solid #8a2be2;
+
+            font-weight: 500;
+            font-size: 1.2em;  
+            font-style: italic;
+        }
+    
+        .big-table td:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+    
+        .big-table .category-header {
+            background: linear-gradient(135deg, #34495e 0%, #2c3e50 100%);
+            color: #ecf0f1;
+            font-size: 22px;
+            text-transform: uppercase;
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        .illustration {
+            transition: filter 0.3s ease, transform 0.3s ease;
+            filter: saturate(100%);
+            transform: scale(1);
+        }
+
+        .illustration:hover {
+            filter: saturate(150%);
+            transform: scale(1.05);
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -38,19 +108,19 @@
                     </tr>
                     <tr>
                         <th>
-                            <img src="img/csharp.png" alt="C#" style="height: 100x; width: 100px;" >
+                            <img src="img/csharp.png" class="illustration" alt="C#" style="height: 100x; width: 100px;" >
                             <div class="lang-name">C#</div>
                         </th>
                         <th>
-                            <img src="img/python.png" alt="C#" style="height: 100x; width: 100px;" >
+                            <img src="img/python.png" class="illustration" alt="C#" style="height: 100x; width: 100px;" >
                             <div class="lang-name">Python</div>
                         </th>
                         <th>
-                            <img src="img/java.png" alt="C#" style="height: 100x; width: 100px;" >
+                            <img src="img/java.png" class="illustration" alt="C#" style="height: 100x; width: 100px;" >
                             <div class="lang-name">Java</div>
                         </th>
                         <th>
-                            <img src="img/go.png" alt="C#" style="height: 100x; width: 100px;" >
+                            <img src="img/go.png" class="illustration" alt="C#" style="height: 100x; width: 100px;" >
                             <div class="lang-name">Go</div>
                         </th>
                     </tr>
@@ -121,15 +191,15 @@
                     <tr><th colspan="3">Frontend Technologies</th></tr>
                     <tr>
                         <th>
-                            <img src="img/html.png" alt="C#" style="height: 100x; width: 100px;" >
+                            <img src="img/html.png" class="illustration" alt="C#" style="height: 100x; width: 100px;" >
                             <div class="lang-name">HTML</div>
                         </th>
                         <th>
-                            <img src="img/css.png" alt="C#" style="height: 100x; width: 100px;" >
+                            <img src="img/css.png" class="illustration" alt="C#" style="height: 100x; width: 100px;" >
                             <div class="lang-name">CSS</div>
                         </th>
                         <th>
-                            <img src="img/js.png" alt="C#" style="height: 100x; width: 100px;" >
+                            <img src="img/js.png" class="illustration" alt="C#" style="height: 100x; width: 100px;" >
                             <div class="lang-name">JavaScript</div>
                         </th>
                     </tr>
@@ -181,20 +251,20 @@
 
         <!-- ---------------- Databases ---------------- -->
         <section class="big-table-section">
-            <table class="big-table" aria-label="Databases">
+            <table class="big-table" class="illustration" aria-label="Databases">
                 <thead>
                     <tr><th colspan="3">Databases</th></tr>
                     <tr>
                         <th>
-                           <img src="img/mysql.png" alt="C#" style="height: 100x; width: 100px;" >
+                           <img src="img/mysql.png" class="illustration" alt="C#" style="height: 100x; width: 100px;" >
                             <div class="lang-name">MySQL</div>
                         </th>
                         <th>
-                            <img src="img/postgres.png" alt="C#" style="height: 100x; width: 100px;" >
+                            <img src="img/postgres.png" class="illustration" alt="C#" style="height: 100x; width: 100px;" >
                             <div class="lang-name">PostgreSQL</div>
                         </th>
                         <th>
-                            <img src="img/mongodb.png" alt="C#" style="height: 100x; width: 100px;" >
+                            <img src="img/mongodb.png" class="illustration" alt="C#" style="height: 100x; width: 100px;" >
                             <div class="lang-name">MongoDB</div>
                         </th>
                     </tr>

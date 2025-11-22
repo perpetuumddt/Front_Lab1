@@ -4,6 +4,310 @@
         <meta charset="UTF-8">
         <title>HelloWorld! - Feedback</title>
         <link rel="stylesheet" href="styles.css">
+
+        <style>
+    
+        /* FLEX-КОНТЕЙНЕР: Основна форма */
+        .feedback-form {
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: flex-start;
+            align-items: stretch;
+            align-content: center;
+            
+            max-width: 900px;
+            margin: 30px auto;
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border: 1px solid rgba(46, 204, 113, 0.2);
+            gap: 20px;
+        }
+
+        .feedback-form h2 {
+            /* FLEX-ЕЛЕМЕНТ */
+            order: -1; /* порядок відображення (перший елемент) */
+            flex: 0 0 auto; /* не росте, не стискається, авто розмір */
+            align-self: center; /* власне вирівнювання по поперечній осі */
+            
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 28px;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+        }
+
+        /* FLEX-КОНТЕЙНЕР: Fieldset */
+        fieldset {
+            display: flex;
+            flex-flow: column nowrap; /* колонка без переносу */
+            justify-content: space-between; /* рівномірний розподіл */
+            align-items: stretch; /* розтягування елементів */
+            
+            /* FLEX-ЕЛЕМЕНТ (всередині .feedback-form) */
+            order: 1; /* другий по порядку */
+            flex: 1 1 auto; /* може рости та стискатися */
+            align-self: stretch; /* розтягується на всю ширину */
+            
+            border: 2px solid #2ecc71;
+            border-radius: 10px;
+            padding: 20px;
+            background: rgba(46, 204, 113, 0.05);
+            gap: 15px;
+        }
+
+        legend {
+            color: #2ecc71;
+            font-weight: bold;
+            font-size: 18px;
+            padding: 0 10px;
+        }
+
+        /* FLEX-КОНТЕЙНЕР: Рядок з двома полями */
+        .form-row {
+            display: flex;
+            flex-flow: row wrap; /* рядок з можливістю переносу */
+            justify-content: space-between; /* простір між елементами */
+            align-items: flex-start; /* вирівнювання по верху */
+            align-content: stretch; /* розтягування при переносі */
+            gap: 15px;
+            
+            /* FLEX-ЕЛЕМЕНТ */
+            order: 0; /* порядок за замовчуванням */
+            flex: 1 1 100%; /* займає всю ширину */
+        }
+
+        /* FLEX-ЕЛЕМЕНТИ: Поля форми в рядку */
+        .form-row .form-group {
+            flex: 1 1 calc(50% - 10px); /* кожне поле займає ~50% */
+            flex-shrink: 1; /* може стискатися */
+            align-self: stretch; /* розтягування по висоті */
+            min-width: 200px; /* мінімальна ширина для responsive */
+        }
+
+        /* FLEX-КОНТЕЙНЕР: Окрема група форми */
+        .form-group {
+            display: flex;
+            flex-flow: column nowrap; /* колонка без переносу */
+            justify-content: flex-start;
+            align-items: stretch;
+            gap: 8px;
+            
+            /* FLEX-ЕЛЕМЕНТ */
+            order: 0;
+            flex: 1 0 auto;
+            align-self: stretch;
+        }
+
+        /* FLEX-КОНТЕЙНЕР: Група радіо-кнопок */
+        .radio-group {
+            display: flex;
+            flex-flow: column nowrap; /* вертикальний стовпчик */
+            justify-content: flex-start;
+            align-items: stretch;
+            gap: 10px;
+            
+            /* FLEX-ЕЛЕМЕНТ */
+            flex: 1 1 auto;
+        }
+
+        /* FLEX-КОНТЕЙНЕР: Окрема опція радіо */
+        .radio-option {
+            display: flex;
+            flex-flow: row nowrap; /* горизонтальний рядок */
+            justify-content: flex-start; /* вирівнювання по лівому краю */
+            align-items: center; /* вирівнювання по центру вертикалі */
+            
+            /* FLEX-ЕЛЕМЕНТ */
+            flex: 0 1 auto; /* не росте, може стискатися */
+            align-self: stretch;
+            
+            padding: 10px;
+            border-radius: 6px;
+            transition: background 0.2s ease;
+        }
+
+        .radio-option:hover {
+            background: rgba(46, 204, 113, 0.1);
+        }
+
+        .radio-option input[type="radio"] {
+            /* FLEX-ЕЛЕМЕНТ */
+            flex: 0 0 18px; /* фіксована ширина */
+            flex-shrink: 0; /* не стискається */
+            margin-right: 10px;
+        }
+
+        .radio-option label {
+            /* FLEX-ЕЛЕМЕНТ */
+            flex: 1 1 auto; /* займає весь доступний простір */
+            margin-bottom: 0;
+        }
+
+        /* FLEX-КОНТЕЙНЕР: Checkbox група */
+        .checkbox-group {
+            display: flex;
+            flex-flow: row nowrap; /* горизонтальний рядок */
+            justify-content: flex-start;
+            align-items: center; /* вирівнювання по центру */
+            
+            /* FLEX-ЕЛЕМЕНТ */
+            order: 3; /* після інших елементів */
+            flex: 0 1 auto;
+            align-self: stretch;
+            
+            padding: 15px;
+            margin-bottom: 15px;
+            background: rgba(46, 204, 113, 0.05);
+            border-radius: 8px;
+            gap: 10px;
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            /* FLEX-ЕЛЕМЕНТ */
+            flex: 0 0 18px; /* фіксований розмір */
+            flex-shrink: 0;
+        }
+
+        .checkbox-group label {
+            /* FLEX-ЕЛЕМЕНТ */
+            flex: 1 1 auto; /* розтягується на доступний простір */
+            margin-bottom: 0;
+            font-weight: normal;
+            cursor: pointer;
+        }
+
+        /* FLEX-КОНТЕЙНЕР: Textarea з лічильником */
+        .textarea-wrapper {
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: flex-start;
+            align-items: stretch;
+            gap: 5px;
+            
+            /* FLEX-ЕЛЕМЕНТ */
+            order: 2;
+            flex: 1 1 auto;
+        }
+
+        /* Лічильник символів */
+        .char-counter {
+            /* FLEX-ЕЛЕМЕНТ */
+            align-self: flex-end; /* вирівнювання по правому краю */
+            flex: 0 0 auto;
+            
+            text-align: right;
+            font-size: 12px;
+            color: #7f8c8d;
+        }
+
+        /* Кнопка submit */
+        .submit-btn {
+            /* FLEX-ЕЛЕМЕНТ */
+            order: 4; /* останній елемент */
+            flex: 0 0 auto; /* не росте і не стискається */
+            align-self: stretch; /* на всю ширину */
+            
+            background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(46, 204, 113, 0.3);
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(46, 204, 113, 0.4);
+            background: linear-gradient(135deg, #27ae60 0%, #229954 100%);
+        }
+
+        /* Базові стилі для полів */
+        label {
+            display: block;
+            color: #34495e;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 14px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            transition: all 0.3s ease;
+            box-sizing: border-box;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #2ecc71;
+            box-shadow: 0 0 0 3px rgba(46, 204, 113, 0.1);
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+            max-height: 300px;
+        }
+
+        /* RESPONSIVE: Flexbox адаптація */
+        @media (max-width: 768px) {
+            .form-row {
+                flex-flow: column nowrap; /* на мобільних - колонка */
+            }
+            
+            .form-row .form-group {
+                flex: 1 1 100%; /* на всю ширину */
+            }
+            
+            .feedback-form {
+                flex-flow: column nowrap; /* без переносу на мобільних */
+                padding: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .radio-option {
+                flex-flow: row nowrap;
+                font-size: 14px;
+            }
+            
+            .checkbox-group {
+                flex-flow: row wrap; /* дозволити перенос на маленьких екранах */
+            }
+        }
+
+        /* ДЕМОНСТРАЦІЯ FLEX ВЛАСТИВОСТЕЙ */
+        /* 
+        ВИКОРИСТАНІ ВЛАСТИВОСТІ FLEX-КОНТЕЙНЕРА:
+        ✅ display: flex
+        ✅ flex-flow (flex-direction + flex-wrap)
+        ✅ justify-content (flex-start, space-between, center)
+        ✅ align-items (stretch, center, flex-start)
+        ✅ align-content (flex-start, stretch)
+        ✅ gap (проміжки між елементами)
+
+        ВИКОРИСТАНІ ВЛАСТИВОСТІ FLEX-ЕЛЕМЕНТІВ:
+        ✅ order (-1, 0, 1, 2, 3, 4)
+        ✅ flex (flex-grow flex-shrink flex-basis)
+        ✅ flex-shrink (0, 1)
+        ✅ align-self (stretch, center, flex-end)
+        */
+    </style>
 </head>
 <body>
     <header>
